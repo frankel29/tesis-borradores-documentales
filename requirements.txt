@@ -1,0 +1,46 @@
+# ============================================================
+# NER Document Processor v3.0 — Requirements
+# Python 3.10+
+# ============================================================
+
+# --- PDF Processing ---
+PyMuPDF==1.24.5
+
+# --- spaCy + Modelo Español ---
+spacy==3.7.4
+# POST-INSTALL: python -m spacy download es_core_news_lg
+
+# --- GLiNER (DOCUMENTO_LEGAL) ---
+gliner==0.2.9
+
+# --- Hugging Face / Transformers ---
+transformers==4.41.2
+sentence-transformers==3.0.1
+setfit==1.0.3
+torch==2.3.1
+huggingface-hub==0.23.4
+
+# --- FastText (ESTADO via similitud coseno) ---
+fasttext-wheel==0.9.2
+# Alternativa si falla en tu plataforma:
+# fasttext==0.9.2
+
+# --- NLP Utilities ---
+python-dateutil==2.9.0
+
+# --- Utilidades ---
+rich==13.7.1
+numpy>=1.24.0
+
+# ============================================================
+# PASOS POST-INSTALACION (ejecutar una sola vez):
+#
+#   1. python -m spacy download es_core_news_lg
+#
+#   2. FastText (opcional, mejora ESTADO):
+#      Descarga cc.es.300.bin de https://fasttext.cc/docs/en/crawl-vectors.html
+#      y colócalo en el directorio de trabajo.
+#      Si no está presente, el sistema usa fallback regex con score=0.90.
+#
+#   3. GLiNER y SBERT se descargan automáticamente en el primer uso.
+# ============================================================

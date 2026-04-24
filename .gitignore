@@ -1,0 +1,14 @@
+# Ignorar entornos virtuales y caché de Python
+.venv/
+__pycache__/
+
+# Ignorar el modelo binario de FastText (pesado)
+cc.es.300.bin
+
+# Ignorar TODO el contenido de estas carpetas
+documentos/*
+Resultados/*
+
+# Excepto el archivo .gitkeep para mantener la estructura en GitHub
+!documentos/.gitkeep
+!Resultados/.gitkeep
